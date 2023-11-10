@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #000000;
+}
+
+:rpot {
+    --primary: #1352ff;
+    --second : #000000;
+    --red :#dc3545;
+}
+
+#main-container {
+    background-color: #000000;
+}
+
+.mavbar {
+    position: fixed;
+    top: 0;
+}
+
+#first-container {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-intro {
+    text-align: center;
+    color: white;
+ }
+
+ .intro-buttons {
+    display: inline-flex;
+    gap: 20px;
+ }
+
+ @media screen and (max-width:500px) {
+   .intro-buttons {
+      display: grid;
+   }
+ }
+
+ .intro-buttons > .btn:nth-child(1) {
+    background-color: #1352ff;
+    border-radius: 50px;
+    padding: 10px 50px;
+    margin-top: 5%;
+    transition: all .5s ease-in-out;
+    color: #fff;
+ }
+
+ .intro-buttons > .btn:nth-child(1):hover {
+   background-color: #ff4e3c;
+ }
+
+ .intro-buttons > .btn:nth-child(2) {
+    color: #fff;
+    background-color: inherit;
+    border: 3px solid white;
+    border-radius: 50px;
+    padding: 10px 50px;
+    margin-top: 5%;
+    transition: all .5s ease-in-out;
+ }  
+
+ .intro-buttons > .btn:nth-child(2):hover {
+    background-color: #fff;
+    color: black;
+ }
+
+ #second-container {
+    background-color: #000000;
+    padding: 30px;
+ }
+
+ .service {
+    color: #fff;
+ }
+
+ .service > .btn {
+    padding: 10px 20px;
+    border: 2px solid #1352ff;
+    color: #1352ff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 1.2rem;
+ }
+
+ .service > .btn:hover {
+    background-color: #1352ff;
+    color: white;
+ }
+
+ .service .btn span i {
+    font-size: 2rem;
+ }
+
+ @media screen and (max-width:764px) {
+   .service {
+      display: grid;
+   }
+ }
+
+ .service-description > p {
+    font-size: 1.5rem;
+    text-align: start;
+    word-break: break-all;
+ }
+
+ .service-des1 > div p {
+    font-size: 1.2rem;
+    text-align: start;
+    word-break: break-all;
+ }
+
+ #third-container {
+    background-color: #181818;
+ }
+
+ .washing-pic1, .washing-pic2, .washing-pic3 {
+    position: relative;
+ }
+
+ .washing-pic1::before, .washing-pic2::before, .washing-pic3::before {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end; /* Align to the end horizontally */
+    align-items: flex-end; /* Align to the end vertically */
+    padding: 8px 15px;
+    background-color: #1352ff;
+ }
+ .washing-pic1::before {
+    content: '£8000';
+ }
+ .washing-pic2::before {
+    content: '£11000';
+ }
+ .washing-pic3::before {
+    content: '£10000';
+ }
+
+ #forth-container {
+   background-color: #000000;
+ }
+
+ .flex-wrapper {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .single-chart {
+   width: 90%;
+   justify-content: space-around;
+   padding: 10px 10px;
+ }
+ 
+ .circular-chart {
+   display: block;
+   margin: 10px auto;
+   max-width: 80%;
+   max-height: 250px;
+ }
+ 
+ .circle-bg {
+   fill: none;
+   stroke: #fff;
+   stroke-width: 2.0;
+ }
+ 
+ .circle {
+   fill: none;
+   stroke-width: 2.0;
+   stroke-linecap: round;
+   animation: progress 1s ease-out forwards;
+ }
+ 
+ @keyframes progress {
+   0% {
+     stroke-dasharray: 0 100;
+   }
+ }
+ 
+ .circular-chart.yellow .circle {
+   stroke: #fff000;
+ }
+
+ .circular-chart.red .circle {
+   stroke: #ff4e3c;
+ }
+ 
+ .circular-chart.green .circle {
+   stroke: #52c158;
+ }
+ 
+ .circular-chart.blue .circle {
+   stroke: #1887cd;
+ }
+ 
+ .percentage {
+   fill: white;
+   font-family: sans-serif;
+   font-size: 0.5em;
+   text-anchor: middle;
+ }
+
+ #fifth-container {
+   background-color: #000000;
+ }
+
+ .vaccum-pic1, .vaccum-pic2, .vaccum-pic3 {
+   position: relative;
+ }
+
+ .vaccum-pic1::before, .vaccum-pic2::before, .vaccum-pic3::before {
+      position: absolute;
+      top: 190px;
+      width: 50%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c2c2c;
+      z-index: 1;
+ }
+
+ .vaccum-pic1::before, .vaccum-pic3::before {
+   content: "REPORT / FEATURED";
+   color:white;
+ }
+
+ .vaccum-pic2::before {
+   content: 'AUTO / TIPS';
+   color: white;
+ }
+
+ .vaccum-detail {
+   background-color: #181818;
+   padding: 20px;
+   position: relative;
+ }
+ #sixth-container {
+   background-color: #000000;
+   margin-top: 10%;
+ }
+
+ .test-drive {
+   background-color: #181818;
+ }
+
+ .test-drive-button {
+   background-color:#181818 ;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 40px;
+ }
+
+ @media screen and (max-width: 768px){   
+   .test-drive {
+      display: grid;
+    }
+    .test-drive-button {
+      display: grid;
+    }
+ }
+
+ .test-drive-button > .btn:nth-child(1) {
+   background-color: #1352ff;
+   border-radius: 50px;
+   padding: 10px 50px;
+   margin-top: 5%;
+   transition: all .5s ease-in-out;
+   color: #fff;
+ }
+
+ .test-drive-button > .btn:nth-child(1):hover {
+   background-color: #ff4e3c;
+ }
+
+ .test-drive-button > .btn:nth-child(2) {
+   border: 3px solid white;
+   padding: 10px 50px;
+   border-radius: 50px;
+   margin-top: 5%;
+   transition: all .5s ease-in-out;
+   color: #fff;
+ }
+
+ .test-drive-button > .btn:nth-child(2):hover {
+   background-color: white;
+   color: black;
+ }
+
+ #seventh-container {
+   background-color: #000000;
+   margin-top: 20%;
+ }
+
+ .washing-plan {
+   background-color: #181818;
+   color: white;
+ }
+
+ .list-1 ul li, .list-2 ul li {
+   background-color: inherit;
+   border:none;
+   color:#fff;
+ }
+
+ #eigth-container {
+   background-color: #000000;
+   padding: 40px;
+   height: 100vh;
+   background-image: url("https://mobirise.com/extensions/carm4/assets/images/14.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin-top: 10%;
+ }
+
+ @media screen and (max-width:768px){
+   #eigth-container {
+      height: auto;
+   }
+ }
+
+ #eigth-container::before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000000;
+   opacity: .5;
+   z-index: 1;
+ }
+
+ .slider {
+   width: 100%;
+   height: 500px;
+   overflow: hidden;
+   position: relative;
+   z-index: 1;
+   padding: 40px;
+}
+
+.slide {
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 60px;
+   font-size: 24px;
+   position: absolute;
+   opacity: 0;
+   transition: opacity 1s, transform 1s;
+   transform: translateX(100%);
+}
+
+.slide.active {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.slide.next {
+   transform: translateX(100%);
+}
+
+.slide.prev {
+   transform: translateX(-100%);
+}
+
+.inside-slide > button {
+   background-color: #1352ff;
+   color: #fff;
+   padding: 10px 30px;
+   border-radius: 50px;
+   transition: all .5s ease-in;
+}
+
+.inside-slide > button:hover {
+   background-color: #ff4e3c;
+}
+
+#ninth-container {
+   background-color: #000000;
+   margin-top: 10%;
+}
+
+#ninth-container > .container > .row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.teams {
+   display: inline-flex;
+   gap: 40px;
+   margin-top: 10%;
+}
+
+#footer-container {
+   background-color: #000000;
+   margin-top: 10%;
+}
+
+#background-pic {
+   background: url("https://mobirise.com/extensions/carm4/assets/images/09.jpg") no-repeat center;
+   background-size: cover;
+   height: 150vh;
+   margin-top: 10%;
+   position: relative;
+   display: flex;
+   justify-content: end;
+   align-items: self-start;
+   padding: 0;
+   margin: 0;
+}
+
+.send-message i {
+   color: #fff;
+   background-color: #1352ff;
+   padding: 20px 20px;
+   font-size: 1.2rem;
+}
+
+.footer-col2 {
+   background-color: #303030;
+}
+.tesm {
+   display: flex;
+}
+.form {
+   margin-top: 5%;
+   display: grid;
+   line-height: 3;
+}
+
+.form > input, textarea {
+   background-color: inherit;
+   border: none;
+   border-bottom: 1px solid #eee;
+   outline: none;
+   color: white;
+   line-height: 3;
+}
+
+
+::placeholder {
+   color: white;
+}
+
+.contact-input > .btn {
+   background-color: #1352ff;
+   border-radius: 50px;
+   padding: 10px 50px;
+   margin-top: 5%;
+   transition: all .5s ease-in-out;
+   color: #fff;
+}
+
+.contact-input >.btn:hover {
+   background-color: #ff4e3c;
+}
