@@ -36,18 +36,18 @@ body {
     color: white;
  }
 
- .intro-buttons {
+ .intro-buttons > div {
     display: inline-flex;
     gap: 20px;
  }
 
  @media screen and (max-width:500px) {
-   .intro-buttons {
+   .intro-buttons > div {
       display: grid;
    }
  }
 
- .intro-buttons > .btn:nth-child(1) {
+ .intro-buttons div > .btn:nth-child(1) {
     background-color: #1352ff;
     border-radius: 50px;
     padding: 10px 50px;
@@ -56,11 +56,11 @@ body {
     color: #fff;
  }
 
- .intro-buttons > .btn:nth-child(1):hover {
+ .intro-buttons div> .btn:nth-child(1):hover {
    background-color: #ff4e3c;
  }
 
- .intro-buttons > .btn:nth-child(2) {
+ .intro-buttons div > .btn:nth-child(2) {
     color: #fff;
     background-color: inherit;
     border: 3px solid white;
@@ -70,7 +70,7 @@ body {
     transition: all .5s ease-in-out;
  }  
 
- .intro-buttons > .btn:nth-child(2):hover {
+ .intro-buttons div > .btn:nth-child(2):hover {
     background-color: #fff;
     color: black;
  }
@@ -149,12 +149,6 @@ body {
  }
  .washing-pic3::before {
     content: '£10000';
- }
-
- @media screen (max-width: 768px){
-   .washing-pic1::before, .washing-pic2::before, .washing-pic3::before {
-
-   }
  }
 
  #forth-container {
@@ -324,10 +318,30 @@ body {
    color: white;
  }
 
+ .lists {
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+
  .list-1 ul li, .list-2 ul li {
    background-color: inherit;
    border:none;
    color:#fff;
+ }
+
+ @media screen and (max-width:768px) {
+   .lists {
+      text-align: center;
+   }
+
+   .list-1, .list-2 {
+      width: 100%;
+   }
+   .list-2 {
+      margin-top: 5%;
+   }
  }
 
  #eigth-container {
@@ -471,8 +485,8 @@ body {
    outline: none;
    color: white;
    line-height: 3;
+   resize: none;
 }
-
 
 ::placeholder {
    color: white;
