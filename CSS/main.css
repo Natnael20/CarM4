@@ -128,14 +128,16 @@ body {
  }
 
  .washing-pic1, .washing-pic2, .washing-pic3 {
-    position: relative;
+    position: relative;  
+    overflow: auto;  
+    display: flex;
+    justify-content: end; /* Align to the end horizontally */
+    align-items:center; 
  }
 
  .washing-pic1::before, .washing-pic2::before, .washing-pic3::before {
     position: absolute;
-    display: flex;
-    justify-content: flex-end; /* Align to the end horizontally */
-    align-items: flex-end; /* Align to the end vertically */
+    margin-top: 40%;
     padding: 8px 15px;
     background-color: #1352ff;
  }
@@ -147,6 +149,12 @@ body {
  }
  .washing-pic3::before {
     content: '£10000';
+ }
+
+ @media screen (max-width: 768px){
+   .washing-pic1::before, .washing-pic2::before, .washing-pic3::before {
+
+   }
  }
 
  #forth-container {
@@ -221,16 +229,13 @@ body {
 
  .vaccum-pic1, .vaccum-pic2, .vaccum-pic3 {
    position: relative;
+   display: flex;
+   align-items: end;
  }
 
  .vaccum-pic1::before, .vaccum-pic2::before, .vaccum-pic3::before {
       position: absolute;
-      top: 190px;
-      width: 50%;
-      height: 20%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 7px 25px;
       background-color: #2c2c2c;
       z-index: 1;
  }
@@ -252,7 +257,13 @@ body {
  }
  #sixth-container {
    background-color: #000000;
-   margin-top: 10%;
+   margin-top: 5%;
+ }
+
+ #sixth-container > .container .row {
+   background-color: #181818;
+   display: flex;
+   align-items: center;
  }
 
  .test-drive {
@@ -269,10 +280,10 @@ body {
 
  @media screen and (max-width: 768px){   
    .test-drive {
-      display: grid;
+      display: block;
     }
     .test-drive-button {
-      display: grid;
+      display: block;
     }
  }
 
@@ -305,7 +316,7 @@ body {
 
  #seventh-container {
    background-color: #000000;
-   margin-top: 20%;
+   margin-top: 10%;
  }
 
  .washing-plan {
@@ -334,12 +345,6 @@ body {
    margin-top: 10%;
  }
 
- @media screen and (max-width:768px){
-   #eigth-container {
-      height: auto;
-   }
- }
-
  #eigth-container::before {
    content: '';
    position: absolute;
@@ -357,7 +362,6 @@ body {
    overflow: hidden;
    position: relative;
    z-index: 1;
-   padding: 40px;
 }
 
 .slide {
@@ -367,7 +371,6 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 60px;
    font-size: 24px;
    position: absolute;
    opacity: 0;
@@ -411,10 +414,20 @@ body {
    align-items: center;
 }
 
-.teams {
-   display: inline-flex;
+.team {
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: center;
+   flex-wrap: wrap;
    gap: 40px;
    margin-top: 10%;
+}
+
+@media screen and (max-width: 578px) {
+      .team {
+         display: grid;
+         grid-template-columns: 1fr;
+      }
 }
 
 #footer-container {
@@ -425,7 +438,7 @@ body {
 #background-pic {
    background: url("https://mobirise.com/extensions/carm4/assets/images/09.jpg") no-repeat center;
    background-size: cover;
-   height: 150vh;
+   height: 100vh;
    margin-top: 10%;
    position: relative;
    display: flex;
@@ -444,9 +457,6 @@ body {
 
 .footer-col2 {
    background-color: #303030;
-}
-.tesm {
-   display: flex;
 }
 .form {
    margin-top: 5%;
